@@ -1,4 +1,4 @@
-package com.jc.aoc
+package com.jc.aoc.one
 
 import com.jc.aoc.util.getResourceAsText
 

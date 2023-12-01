@@ -5,8 +5,8 @@ plugins {
     application
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "com.jc.aoc"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -21,9 +21,9 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "17"
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("com.jc.aoc.${System.getProperty("day")}.MainKt")
 }
