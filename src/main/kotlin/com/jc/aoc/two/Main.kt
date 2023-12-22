@@ -1,21 +1,19 @@
 package com.jc.aoc.two
 
+import com.jc.aoc.util.AbstractAdventOfCodeDay
 import com.jc.aoc.util.AdventOfCodeDay
 import com.jc.aoc.util.validate
 
-fun main() {
-    val dayTwo = DayTwo()
-//    dayTwo.testSamplePart1()
-//    dayTwo.runInputPart1()
-//    dayTwo.testSamplePart2()
-    dayTwo.runInputPart2()
+fun main(args: Array<String>) {
+    val dayTwo = DayTwo(args)
+    dayTwo.run()
 }
 
 data class CubeGame(val gameNumber: Int, val rounds: List<CubeRound>)
 
 data class CubeRound(val red: Int, val green: Int, val blue: Int)
 
-class DayTwo : AdventOfCodeDay {
+class DayTwo (args: Array<String>) : AbstractAdventOfCodeDay(args), AdventOfCodeDay {
     override fun getDay(): String = "two"
 
     override fun runInputPart1() {

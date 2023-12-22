@@ -1,18 +1,15 @@
 package com.jc.aoc.one
 
+import com.jc.aoc.util.AbstractAdventOfCodeDay
 import com.jc.aoc.util.AdventOfCodeDay
-import com.jc.aoc.util.getResourceByLine
 import com.jc.aoc.util.validate
 
-fun main() {
-    val dayOne = DayOne()
-    dayOne.testSamplePart1()
-    dayOne.runInputPart1()
-    dayOne.testSamplePart2()
-    dayOne.runInputPart2()
+fun main(args: Array<String>) {
+    val dayOne = DayOne(args)
+    dayOne.run()
 }
 
-class DayOne : AdventOfCodeDay {
+class DayOne(args: Array<String>) : AbstractAdventOfCodeDay(args), AdventOfCodeDay {
     override fun getDay(): String = "one"
 
     override fun runInputPart1() {
