@@ -28,7 +28,7 @@ abstract class AbstractAdventOfCodeDay(args: Array<String>) : AdventOfCodeDay {
         option = AdventOfCodeOption.valueOf(optionStr.uppercase(Locale.getDefault()))
     }
 
-    fun run() {
+    override fun run() {
         when (part) {
             AdventOfCodePart.ONE -> {
                 when (option) {
@@ -59,6 +59,7 @@ abstract class AbstractAdventOfCodeDay(args: Array<String>) : AdventOfCodeDay {
 }
 
 interface AdventOfCodeDay {
+    fun run()
     fun testSamplePart1()
     fun runInputPart1()
     fun testSamplePart2()
